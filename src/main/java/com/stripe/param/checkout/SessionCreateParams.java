@@ -33,8 +33,8 @@ public class SessionCreateParams extends ApiRequestParams {
   BillingAddressCollection billingAddressCollection;
 
   /**
-   * The URL the customer will be directed to if they decide to cancel payment and return to your
-   * website.
+   * If set, Checkout displays a back button and customers will be directed to this URL if they
+   * decide to cancel payment and return to your website.
    */
   @SerializedName("cancel_url")
   String cancelUrl;
@@ -94,8 +94,8 @@ public class SessionCreateParams extends ApiRequestParams {
    * data entered in Checkout with <a
    * href="https://stripe.com/docs/api/checkout/sessions/object#checkout_session_object-customer_details">customer_details</a>.
    *
-   * <p>Sessions that don't create Customers instead create <a
-   * href="https://support.stripe.com/questions/guest-customer-faq">Guest Customers</a> in the
+   * <p>Sessions that don't create Customers instead are grouped by <a
+   * href="https://stripe.com/docs/payments/checkout/guest-customers">guest customers</a> in the
    * Dashboard. Promotion codes limited to first time customers will return invalid for these
    * Sessions.
    *
@@ -510,8 +510,8 @@ public class SessionCreateParams extends ApiRequestParams {
     }
 
     /**
-     * The URL the customer will be directed to if they decide to cancel payment and return to your
-     * website.
+     * If set, Checkout displays a back button and customers will be directed to this URL if they
+     * decide to cancel payment and return to your website.
      */
     public Builder setCancelUrl(String cancelUrl) {
       this.cancelUrl = cancelUrl;
@@ -584,8 +584,8 @@ public class SessionCreateParams extends ApiRequestParams {
      * data entered in Checkout with <a
      * href="https://stripe.com/docs/api/checkout/sessions/object#checkout_session_object-customer_details">customer_details</a>.
      *
-     * <p>Sessions that don't create Customers instead create <a
-     * href="https://support.stripe.com/questions/guest-customer-faq">Guest Customers</a> in the
+     * <p>Sessions that don't create Customers instead are grouped by <a
+     * href="https://stripe.com/docs/payments/checkout/guest-customers">guest customers</a> in the
      * Dashboard. Promotion codes limited to first time customers will return invalid for these
      * Sessions.
      *
